@@ -1,0 +1,58 @@
+﻿@model IEnumerable<mvcDemo.Models.Aluno>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disciplina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.P2)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ra)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Disciplina)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.P1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.P2)
+                </td>
+                <td>
+                   
+                    @Html.ActionLink("Detalhes" , "Details", new {  id=item.Ra }) 
+                   
+            </tr>
+        }
+    </tbody>
+</table>

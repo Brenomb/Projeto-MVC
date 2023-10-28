@@ -1,0 +1,48 @@
+﻿@model mvcDemo.Models.Aluno
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Aluno</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Disciplina)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Disciplina)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.P1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.P1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.P2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.P2)
+        </dd>
+    </dl>
+</div>
+<div>
+    
+    <a asp-action="Index">Lista de Alunos</a>
+</div>
